@@ -4,8 +4,6 @@ module Resolvers
     argument :pokedex_number, ID, required: false
 
     def resolve(pokedex_number:nil)
-      p dataloader
-      p object
       if pokedex_number.nil?
         ::Pokemon.all
       else
