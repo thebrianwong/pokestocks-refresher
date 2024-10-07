@@ -21,7 +21,7 @@ default: &default
 
 development:
   <<: *default
-  database: pokestocks_refresher_development
+  database: pokestocks
 
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.
