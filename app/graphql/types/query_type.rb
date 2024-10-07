@@ -31,5 +31,6 @@ module Types
     field :season, resolver: Resolvers::SeasonResolver, null: true
     field :pokemon_type, resolver: Resolvers::PokemonTypeResolver
     field :stock, resolver: Resolvers::StockResolver
+    field :pokemon, resolver: Resolvers::PokemonResolver
   end
 end
