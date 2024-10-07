@@ -27,5 +27,7 @@ module Types
     def test_field
       "Hello World!"
     end
+
+    field :season, resolver: Resolvers::SeasonResolver, null: true
   end
 end
