@@ -29,5 +29,6 @@ module Types
     end
 
     field :season, resolver: Resolvers::SeasonResolver, null: true
+    field :pokemon_type, resolver: Resolvers::PokemonTypeResolver
   end
 end
