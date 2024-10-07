@@ -32,5 +32,6 @@ module Types
     field :pokemon_type, resolver: Resolvers::PokemonTypeResolver
     field :stock, resolver: Resolvers::StockResolver
     field :pokemon, resolver: Resolvers::PokemonResolver
+    field :pokemon_stock_pair, resolver: Resolvers::PokemonStockPairResolver
   end
 end
