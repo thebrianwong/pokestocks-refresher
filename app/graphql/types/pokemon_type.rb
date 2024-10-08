@@ -8,5 +8,17 @@ module Types
     field :type_1, Types::PokemonTypeType, null: false
     field :type_2, Types::PokemonTypeType, null: true
     field :sprite_url, String, null: false
+
+    def type_1
+      dataloader.with(Sources::ActiveRecord, ::PokemonType).load(object.type_1_id)
+    end
+
+    def type_2
+      if object.type_2_id.nil?
+       nil
+      else
+       dataloader.with(Sources::ActiveRecord, ::PokemonType).load(object.type_2_id)
+      end
+    end
   end
 end
