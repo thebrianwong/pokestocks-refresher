@@ -5,7 +5,7 @@ module Resolvers
 
     def resolve(id:nil)
       if id.nil?
-        ::Stock.all
+        ::Stock.all.order(:id)
       else
         ::Stock.where({ id: id })
       end

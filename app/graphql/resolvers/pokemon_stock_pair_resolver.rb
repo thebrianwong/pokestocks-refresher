@@ -5,7 +5,7 @@ module Resolvers
 
     def resolve(id:nil)
       if id.nil?
-        ::PokemonStockPair.all
+        ::PokemonStockPair.all.order(:id)
       else
         ::PokemonStockPair.where({ id: id })
       end

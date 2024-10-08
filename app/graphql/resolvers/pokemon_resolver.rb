@@ -5,7 +5,7 @@ module Resolvers
 
     def resolve(pokedex_number:nil)
       if pokedex_number.nil?
-        ::Pokemon.all
+        ::Pokemon.all.order(:id)
       else
         ::Pokemon.where({ pokedex_number: pokedex_number })
       end

@@ -5,7 +5,7 @@ module Resolvers
 
     def resolve(id:nil)
       if id.nil?
-        ::PokemonType.all
+        ::PokemonType.all.order(:id)
       else
         ::PokemonType.where({ id: id })
       end
